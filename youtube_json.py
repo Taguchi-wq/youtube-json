@@ -7,8 +7,7 @@ class YoutubeJson:
     def search_videos(self, keyword: str) -> list:
         videos = []
         s = Search(keyword)
-        results = s.results
-        for result in results:
+        for result in s.results:
             video = {
                 'title': result.title,
                 'url': 'https://www.youtube.com/watch?v=' + result.video_id,
